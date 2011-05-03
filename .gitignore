@@ -5,3 +5,4 @@ projects.zsh
 custom/*
 !custom/example.zsh
 !custom/personal.zsh
+cache
