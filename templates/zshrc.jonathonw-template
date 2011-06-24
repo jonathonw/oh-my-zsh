@@ -1,0 +1,62 @@
+# Path to your oh-my-zsh configuration.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set to the name theme to load.
+# Look in ~/.oh-my-zsh/themes/
+export ZSH_THEME="bira-noruby"
+
+# Set to this to use case-sensitive completion
+# export CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+export DISABLE_AUTO_UPDATE="true"
+
+# Uncomment following line if you want to disable colors in ls
+# export DISABLE_LS_COLORS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(gem git github)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+
+# ACE
+export ACE_ROOT=$HOME/tools/ACE_wrappers
+export MPC_ROOT=$ACE_ROOT/MPC
+export TAO_ROOT=$ACE_ROOT/TAO
+export CIAO_ROOT=$TAO_ROOT/CIAO
+export PATH=$ACE_ROOT/bin:$PATH
+export LD_LIBRARY_PATH=$ACE_ROOT/lib:$LD_LIBRARY_PATH
+
+# Android SDK
+export ANDROID_ROOT=$HOME/tools/android
+export ANDROID_NDK_ROOT=$HOME/tools/android-ndk
+export PATH=$ANDROID_ROOT/tools:$ANDROID_ROOT/platform-tools:$ANDROID_NDK_ROOT:$PATH
+
+# AMMO Gateway
+export PROTOBUF_ROOT=/usr
+export AMMO_ROOT=$HOME/projects/ammo
+export GATEWAY_ROOT=$AMMO_ROOT/Gateway
+export LD_LIBRARY_PATH=$GATEWAY_ROOT/build/lib:$PROTOBUF_ROOT/lib/:$LD_LIBRARY_PATH
+
+# Ruby and Rubygems (not on path by default on Ubuntu)
+PATH=/var/lib/gems/1.8/bin:/usr/local/bin:$PATH
+
+# Opensplice
+export OSPL_HOME=$HOME/tools/opensplice/HDE/x86_64.linux2.6
+export OSPL_TARGET=x86_64.linux2.6
+export OSPL_TMPL_PATH=$OSPL_HOME/etc/idlpp
+export OSPL_URI=file://$OSPL_HOME/etc/config/ospl.xml
+export LD_LIBRARY_PATH=$OSPL_HOME/lib:$LD_LIBRARY_PATH
+export PATH=$OSPL_HOME/bin:$PATH
+
+# MADARA
+export MADARA_ROOT=$HOME/tools/madara
+export LD_LIBRARY_PATH=$MADARA_ROOT/lib:$LD_LIBRARY_PATH
+export PATH=$MADARA_ROOT/bin:$PATH 
+
+# clang build (from svn)
+export CLANG_ROOT=$HOME/clang/build/Release+Asserts
+export PATH=$CLANG_ROOT/bin:$PATH
