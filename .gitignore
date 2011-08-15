@@ -7,3 +7,4 @@ custom/*
 !custom/example.zsh
 !custom/personal.zsh
 cache
+*.swp
