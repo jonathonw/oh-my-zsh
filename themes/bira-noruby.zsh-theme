@@ -6,8 +6,8 @@ local current_dir='%{$terminfo[bold]$fg[red]%} %~%{$reset_color%}'
 local rvm_ruby='%{$fg[red]%}‹$(~/.rvm/bin/rvm-prompt i v g)›%{$reset_color%}'
 local git_branch='$(git_prompt_info)%{$reset_color%}'
 
-PROMPT="╭─${user_host} ${current_dir} ${git_branch}
-╰─%B$%b "
+PROMPT="${user_host} ${current_dir} ${git_branch}
+%B$%b "
 RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
