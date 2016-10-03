@@ -37,3 +37,6 @@ bindkey -s "^[Ol" "+"
 bindkey -s "^[Om" "-"
 bindkey -s "^[Oj" "*"
 bindkey -s "^[Oo" "/"
+
+bindkey "\e[H" beginning-of-line
+bindkey "\e[F" end-of-line
